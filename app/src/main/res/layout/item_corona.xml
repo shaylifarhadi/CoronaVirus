@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        app:cardCornerRadius="25dp"
+        android:elevation="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/iran"
+                android:textSize="26sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_confirme"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/confirmed" />
+
+            <ImageView
+                android:id="@+id/img_death"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/img_confirme"
+                app:layout_constraintTop_toBottomOf="@+id/img_confirme"
+                app:srcCompat="@drawable/death" />
+
+            <ImageView
+                android:id="@+id/img_recover"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/img_death"
+                app:layout_constraintStart_toStartOf="@+id/img_death"
+                app:layout_constraintTop_toBottomOf="@+id/img_death"
+                app:srcCompat="@drawable/recovered" />
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:textSize="18sp"
+                android:text="@string/confirmed"
+                app:layout_constraintBottom_toBottomOf="@+id/img_confirme"
+                app:layout_constraintEnd_toStartOf="@+id/img_confirme"
+                app:layout_constraintTop_toTopOf="@+id/img_confirme" />
+
+            <TextView
+                android:id="@+id/tv_death"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/death"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_death"
+                app:layout_constraintEnd_toEndOf="@+id/tv_confirm"
+                app:layout_constraintStart_toStartOf="@+id/tv_confirm"
+                app:layout_constraintTop_toTopOf="@+id/img_death" />
+
+            <TextView
+                android:id="@+id/tv_recover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recovered"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_recover"
+                app:layout_constraintEnd_toEndOf="@+id/tv_death"
+                app:layout_constraintStart_toStartOf="@+id/tv_death"
+                app:layout_constraintTop_toTopOf="@+id/img_recover" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

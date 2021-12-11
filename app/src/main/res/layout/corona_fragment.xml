@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.coronavs.ui.list.CoronaViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_100">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rec_et"
+            android:drawableStart="@drawable/ic_search"
+            android:ems="10"
+            android:hint="@string/search"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/rv_corona"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_search"
+            app:layout_constraintVertical_bias="0.06999999">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/tv_most_recover"
+                    style="@style/tv_most"
+                    android:background="@drawable/background_text"
+                    android:enabled="true"
+                    android:text="@string/most_recover"
+                    android:textColor="@color/gray_500"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_most_death"
+                    style="@style/tv_most"
+                    android:background="@drawable/background_text"
+                    android:enabled="true"
+                    android:text="@string/most_death"
+                    android:textColor="@color/gray_500"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_most_recover"
+                    app:layout_constraintStart_toEndOf="@+id/tv_most_recover"
+                    app:layout_constraintTop_toTopOf="@+id/tv_most_recover" />
+
+                <TextView
+                    android:id="@+id/tv_most_confirm"
+                    style="@style/tv_most"
+                    android:background="@drawable/background_text"
+                    android:enabled="true"
+                    android:text="@string/most_confirm"
+                    android:textColor="#5C5D5E"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_most_death"
+                    app:layout_constraintStart_toEndOf="@+id/tv_most_death"
+                    app:layout_constraintTop_toTopOf="@+id/tv_most_death" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_corona"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view"
+            tools:listitem="@layout/item_corona" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

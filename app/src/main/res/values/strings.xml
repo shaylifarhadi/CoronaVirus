@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CoronaVs</string>
+    <string name="general_error">Error</string>
+    <string name="not_found">Not found</string>
+    <string name="token_expire_login_again">Token expire</string>
+    <string name="connection_error">connection Error</string>
+    <string name="timeout">Timeout</string>
+    <string name="search">جستجوی کشور</string>
+    <string name="newConfirmed">مبتلایان جدید:%d</string>
+    <string name="newDeath">فوت شدگان ":"%d </string>
+    <string name="newRecovered">بهبودیافتگان ":" %d</string>
+    <string name="most_death">بیشترین فوت شدگان</string>
+    <string name="most_recover">بیشترین بهبودیافتگان</string>
+    <string name="most_confirm">بیشترین مبتلایان</string>
+    <string name="confirmed">مبتلایان جدید:555</string>
+    <string name="death">فوت شدگان:4444</string>
+    <string name="recovered">بهبودیافتگان:555</string>
+    <string name="iran">iran</string>
+    <string name="corona_virus">corona virus</string>
+</resources>
